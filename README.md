@@ -22,3 +22,8 @@ final_audio_pairs.py - clustering audio feature pairs with visualization, six to
 final_kmeans.py - clustering four audio features including plot after PCA dimensionality reduction and elbow-point plot
 
 sparse_playlists.py - this program, alongside utils_playlists.py, creates a similarity matrix using song vectors and context windows
+
+
+PLAYLISTS:
+
+- only uploaded 50 of the 500 playlists for both methods
