@@ -26,4 +26,4 @@ CODE:
 
 PLAYLISTS:
 
-- 500 playlists each of similar songs
+- 500 playlists for each method
