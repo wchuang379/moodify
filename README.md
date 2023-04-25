@@ -6,9 +6,8 @@ DATA:
 
 playlist2tracks_full.txt - contains all of the playlists inner dataset 
 
-tracks2features_full.csv - contains a table that has the track title, artist name, and audio features
+tracks2features_full.csv/tracks2features_full.db - contains a table that has the track title, artist name, and audio features
 
-tracks2features_full.db - database for all Spotify API calls
 
 CODE:
 
