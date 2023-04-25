@@ -26,4 +26,4 @@ CODE:
 
 PLAYLISTS:
 
-- only uploaded 50 of the 500 playlists for both methods
+- 500 playlists each of similar songs
