@@ -26,4 +26,4 @@ CODE:
 
 PLAYLISTS:
 
-- 500 playlists for each method
+- 500 playlists each
