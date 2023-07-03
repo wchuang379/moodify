@@ -33,10 +33,12 @@ https://github.com/vaslnk/Spotify-Song-Recommendation-ML/tree/master/data?fbclid
 **"MoodMix" for Spotify**
 
 **Introduction & Goals**
+
 Have you ever wondered how Spotify makes their recommended playlists? Don't you love the process of creating your own? This project aims to use Spotify past user-generated playlist data and Spotify song audio features to group songs into similar topics and be able to generate our own data-driven playlists.
 
 
 **Project Overview**
+
 This project is based on a **Spotify dataset of 4000 user-generated playlists** (containing **over 2 million songs** in total). The data is stored as a JSON object: each playlist is a dictionary of its features, with one being a list of tracks within the said playlist. I used this JSON, alongside the Spotify API, to construct two corpuses of data:
 ‍
 1.  A **mapping from playlist titles to track titles** within that playlist in order to implement a **playlist generation model based on the deep learning word vector algorithm**.
@@ -45,6 +47,7 @@ This project is based on a **Spotify dataset of 4000 user-generated playlists** 
 
 
 **Method 1: Song Recs by Playlist Similarity**
+
 The first method of determining the similarity between songs was by using **song vectorizations and context windows**. I determined the closeness of songs by **how often they appear in the same playlist together**. In other words, this method represents similarity as determined through the user-generated playlists - **representative of user opinions**.
 
 Each song is assigned a vector which determines how often every other song appears in the same playlist as that song. I found the distance between songs using a cosine distance metric between the two vectors. This helps to determine the most similar songs and be able to find the top most similar songs to a particular song.
@@ -55,6 +58,7 @@ Finally, I ran **K-Means** using **500 clusters to produce 500 playlists of the 
 
 
 **Method 2: Song Clustering By Audio Features (K-Means)**
+
 For the second playlist-generating program, I decided to **cluster tracks based on their audio feature similarities**. That is, tracks were similar if the difference between their audio features was small. After consulting several musician friends, I chose to focus on 4 audio features - tempo, valence, danceability, and energy. They suggested that this set is the most representative of a song out of the 13 pre-defined audio features in the Spotify API. Since audio features have different scales, I normalized each feature by its maximum existing value. Then, I decided to implement K-Means clustering in 2 different ways:
 
 1) I **clustered songs based on all 5 features and used the PCA dimensionality-reduction algorithm** to reduce our plots to 3 dimensions. I ran the program for a range of N-clusters and used the accumulated errors to plot an elbow graph and **concluded that the optimum number of clusters is 7**. Scikit-learn and Hyper-tools were used to create the graph below.
@@ -64,6 +68,7 @@ For the second playlist-generating program, I decided to **cluster tracks based 
 I **compared the clustering errors of each pair**, as seen in the graph below. The pair of audio features resulting in the lowest clustering error is **Tempo & Danceability**.
 ‍
 
-Conclusions
+**Conclusions**
+
 Firstly, through the use of two methods, 1) similarity by user-generated playlists, and 2) similarity by audio features, I was able to **create 500 playlists each of similar songs**. Secondly, I determined through K-Means clustering on various audio features of songs, that through looking at the clustering errors, the pair of audio features that results in the lowest error is **Tempo & Danceability**.
 ‍
