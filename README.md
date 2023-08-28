@@ -1,4 +1,4 @@
-# moodmix-for-spotify
+# moodify-for-spotify
 
 **MAIN DATASET:**
 https://github.com/vaslnk/Spotify-Song-Recommendation-ML/tree/master/data?fbclid=IwAR30mCJqGeehmMyhwkK26WvK5grtOB_ciP-Rjlpwa-2avySKdSNtu4c1-qs
@@ -30,7 +30,7 @@ https://github.com/vaslnk/Spotify-Song-Recommendation-ML/tree/master/data?fbclid
 - 500 playlists for each method
 
 
-**"MoodMix" for Spotify**
+**Moodify for Spotify**
 
 **Introduction & Goals**
 
